@@ -1,8 +1,6 @@
 {{#each this}}
-<li class='gallery__item'>
     <div class="photo-card">
-        <img class='gallery__item-img' src="{{webformatURL}}" alt="{{tags}}" data-source='{{largeImageURL}}'
-            width='{{webformatWidth}}' height='{{webformatHeight}}' />
+        <img src="{{webformatURL}}" data-source={{largeImageURL}} alt="" width="400" />
 
         <div class="stats">
             <p class="stats-item">
@@ -21,8 +19,6 @@
                 <i class="material-icons">cloud_download</i>
                 {{downloads}}
             </p>
-
         </div>
     </div>
-</li>
 {{/each}}
