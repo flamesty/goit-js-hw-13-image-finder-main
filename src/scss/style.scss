@@ -1,0 +1,102 @@
+@import './spin';
+
+html {
+  box-sizing: border-box;
+  overflow-anchor: none;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  height: 100%;
+  overflow: auto;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+    'Helvetica Neue', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  background-image: url('../images/bg-pattern.png');
+  background-size: 170%;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.search-form {
+  margin: 20px 0;
+}
+input[name='query'] {
+  display: block;
+  margin: 0 auto;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1vw;
+  grid-auto-flow: minmax(250px, auto);
+
+  &__item {
+    margin: 2% 2% 20px 2%;
+    &-img {
+      cursor: pointer;
+      transition: all 0.2s linear;
+
+      &:hover {
+        transform: scale(1.02);
+        box-shadow: 0 0 15px;
+      }
+    }
+  }
+}
+
+.spinner.is-hidden {
+  display: none;
+}
+
+.load-more {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 60px;
+  cursor: pointer;
+  position: relative;
+  border-radius: 5px;
+}
+.load-more.is-hidden {
+  display: none;
+}
